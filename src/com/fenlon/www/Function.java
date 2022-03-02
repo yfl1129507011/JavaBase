@@ -15,6 +15,19 @@ public class Function {
         return num1 > num2 ? num1 : num2;
     }
 
+    /**
+     * 可变参数传递
+     * @param num
+     * @return
+     */
+    public static int sum(int... num) {
+        int sum = 0;
+        for (int i:num) {
+            sum += i;
+        }
+        return  sum;
+    }
+
     public static void main(String[] args) {
         double num = max(1, 3);
         System.out.println(num);  // 3.0
@@ -29,5 +42,10 @@ public class Function {
         for (int i = 0; i < args.length; i++) {
             System.out.println(args[i]);
         }
+
+        int sum = sum(1, 2, 3);
+        System.out.println(sum);
     }
+    
+
 }
