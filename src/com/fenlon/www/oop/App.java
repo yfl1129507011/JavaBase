@@ -56,5 +56,13 @@ public class App {
         } finally {
             System.out.println(-1);
         }
+
+        // Ctrl + Alt + T
+        try {
+            System.out.println(1/0);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+        }
     }
 }
